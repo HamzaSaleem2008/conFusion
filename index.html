@@ -76,6 +76,67 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="reservationModal" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Reserve a Table</h4>
+            <button class="close" data-dismiss="modal" type="button" name="button">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="" action="index.html" method="post">
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label" for="">Number of Guest</label>
+                    <div class="col-md-10">
+                        <input type="radio" name="tableRadio" value="1" autocomplete="off" checked id="radioOne">
+                        <label class="mr-2" for="radioOne">1</label>
+                        <input type="radio" name="tableRadio" value="2" autocomplete="off" id="radioTwo">
+                        <label class="mr-2" for="radioTwo">2</label>
+                        <input type="radio" name="tableRadio" value="3" autocomplete="off" id="radioThree">
+                        <label class="mr-2" for="radioThree">3</label>
+                        <input type="radio" name="tableRadio" value="4" autocomplete="off" id="radioFour">
+                        <label class="mr-2" for="radioFour">4</label>
+                        <input type="radio" name="tableRadio" value="5" autocomplete="off" id="radioFive">
+                        <label class="mr-2" for="radioFive">5</label>
+                        <input type="radio" name="tableRadio" value="6" autocomplete="off" id="radioSix">
+                        <label class="mr-2" for="radioSix">6</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label" for="">Section</label>
+                  <div class="col-md-4">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-success active">
+                        <input id="non-smoking" type="radio" name="" value="nonsmoking" autocomplete="off" checked> Non-Smoking
+                      </label>
+                      <label class="btn btn-danger">
+                        <input id="smoking" type="radio" name="" value="smoking" autocomplete="off"> Smoking
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-2" for="">Date and Time</label>
+                  <div class="col-md-4">
+                    <input type="date" name="" value="">
+                  </div>
+                  <div class="col-md-4">
+                    <input type="time" name="" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="offset-md-2 col-md-10">
+                    <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Reserve</button>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     </div>
     <header class="jumbotron">
@@ -85,9 +146,11 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
-                    <a class="offset-md-2 btn btn-warning" data-toggle="tooltip" data-html="true" title="Or call us at <br><strong>+852 12345678</strong>" data-placements="bottom" role="button" href="#reservationForm">Reserve Table</a>
+                <div class="col col-sm align-self-center">
+                  <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col col-sm align-self-center">
+                    <button class="btn btn-warning btn-sm btn-block text-white" role="button" data-toggle="modal" data-target="#reservationModal" type="button" name="button">Reserve Table</button>
                 </div>
             </div>
         </div>
